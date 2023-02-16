@@ -6,9 +6,9 @@ ID,Category,Name,Method,MethodArgument,RegistryPath,RegistryItem,ClassName,Names
 1.1.5,"Account Policies","Password must meet complexity requirements",secedit,"System Access\PasswordComplexity",,,,,,0,1,=,Medium,1,"dc,member server"
 1.1.6,"Account Policies","Relax minimum password length limits",Registry,,HKLM:\System\CurrentControlSet\Control\SAM,RelaxMinimumPasswordLengthLimits,,,,0,1,=,Medium,1,member server
 1.1.7,"Account Policies","Store passwords using reversible encryption",secedit,"System Access\ClearTextPassword",,,,,,0,0,=,High,1,"dc,member server"
-1.2.1,"Account Policies","Account lockout duration",accountpolicy,,,,,,,30,15,>=,Low,,
-1.2.2,"Account Policies","Account lockout threshold",accountpolicy,,,,,,,Never,5,<=!0,Low,,
-1.2.3,"Account Policies","Reset account lockout counter",accountpolicy,,,,,,,30,15,>=,Low,,
+1.2.1,"Account Policies",Account lockout duration,accountpolicy,,,,,,,30,15,>=,Low,1,"dc,member server"
+1.2.2,"Account Policies","Account lockout threshold",accountpolicy,,,,,,,Never,5,<=!0,Low,1,"dc,member server"
+1.2.3,"Account Policies","Reset account lockout counter",accountpolicy,,,,,,,30,15,>=,Low,1,"dc,member server"
 2.2.1,"User Rights Assignment",Access Credential Manager as a trusted caller,accesschk,SeTrustedCredManAccessPrivilege,,,,,,,,=,Medium,,
 2.2.2,"User Rights Assignment",Access this computer from the network (DC),accesschk,SeNetworkLogonRight,,,,,,"NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS;BUILTIN\Pre-Windows 2000 Compatible Access;BUILTIN\Administrators;NT AUTHORITY\Authenticated Users;Everyone","NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS;BUILTIN\Administrators;NT AUTHORITY\Authenticated Users",=,Medium,,
 2.2.3,"User Rights Assignment","Access this computer from the network (Member)",accesschk,SeNetworkLogonRight,,,,,,"BUILTIN\Pre-Windows 2000 Compatible Access;BUILTIN\Administrators;NT AUTHORITY\Authenticated Users;Everyone","BUILTIN\Administrators;NT AUTHORITY\Authenticated Users",=,Medium,,
